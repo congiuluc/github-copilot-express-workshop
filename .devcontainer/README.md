@@ -1,165 +1,92 @@
-# DevContainers for GitHub Copilot Workshops
+# GitHub Codespaces Setup for GitHub Copilot Express Workshop
 
-This directory contains pre-configured development environments for each workshop, providing a consistent and hassle-free setup experience.
+This repository is pre-configured to work seamlessly with GitHub Codespaces, providing you with a complete cloud development environment.
 
-## 🐳 What are DevContainers?
+## 🚀 Quick Start
 
-DevContainers provide a complete development environment in a Docker container, including:
-- ✅ **Pre-installed runtime and tools** (SDKs, frameworks, CLI tools)
-- ✅ **VS Code extensions** (GitHub Copilot, language support, Azure tools)
-- ✅ **Configured settings** (formatting, IntelliSense, debugging)
-- ✅ **Port forwarding** for local development
-- ✅ **Consistent environment** across different machines
+1. **Click the Codespaces badge** in any workshop file or use the button below
+2. **Wait 2-3 minutes** for the environment to initialize
+3. **Start coding immediately** - all tools are pre-installed!
 
-## 🚀 Quick Start Options
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/your-username/github-copilot-express-workshop?quickstart=1)
 
-### Option 1: One-Click in Browser (Easiest)
-Click the "Open in DevContainer" button in any workshop file to start immediately in a browser-based VS Code environment.
+## 🛠️ What's Pre-installed
 
-### Option 2: Local Development
-1. **Install Docker Desktop** - [Download here](https://docker.com/products/docker-desktop)
-2. **Install VS Code** with "Remote - Containers" extension
-3. **Clone this repository**
-4. **Open specific workshop folder**:
-   - `.devcontainer/dotnet` for .NET workshop
-   - `.devcontainer/python` for Python workshop  
-   - `.devcontainer/javascript` for JavaScript/TypeScript workshop
-   - `.devcontainer/java` for Java workshop
-5. **Command Palette**: `Remote-Containers: Reopen in Container`
+Our Codespace includes everything you need for all workshop tracks:
 
-## 📁 DevContainer Configurations
+### Development Tools
+- ✅ **Visual Studio Code** (in browser or desktop)
+- ✅ **GitHub Copilot** and **GitHub Copilot Chat**
+- ✅ **Git** for version control
+- ✅ **Azure CLI** for cloud deployment
+- ✅ **GitHub CLI** for repository management
 
-### .NET DevContainer (`.devcontainer/dotnet`)
-- **Base**: .NET 8 SDK on Debian
-- **Extensions**: C# Dev Kit, GitHub Copilot, Azure Tools
-- **Ports**: 5000, 5001, 7000, 7001
-- **Tools**: Azure CLI, GitHub CLI, Docker-in-Docker
+### Language Runtimes
+- ✅ **.NET 8 SDK** (for .NET workshop)
+- ✅ **Python 3.11+** (for Python workshop)
+- ✅ **Node.js 20 LTS** with npm (for JavaScript workshop)
+- ✅ **Java 17** with Maven (for Java workshop)
 
-### Python DevContainer (`.devcontainer/python`)
-- **Base**: Python 3.11 on Debian
-- **Extensions**: Python, Pylint, Black, GitHub Copilot, Azure Tools
-- **Ports**: 8000, 8080
-- **Pre-installed**: FastAPI, SQLAlchemy, Pytest, JWT libraries
-- **Tools**: Azure CLI, GitHub CLI, Docker-in-Docker
+### VS Code Extensions
+- ✅ **GitHub Copilot & Chat**
+- ✅ **C# Dev Kit** (.NET development)
+- ✅ **Python Extension Pack** 
+- ✅ **TypeScript support**
+- ✅ **Java Extension Pack**
+- ✅ **Azure Tools**
+- ✅ **Prettier** (code formatting)
 
-### JavaScript/TypeScript DevContainer (`.devcontainer/javascript`)
-- **Base**: Node.js 20 LTS on Debian
-- **Extensions**: TypeScript, ESLint, Prettier, GitHub Copilot, Azure Tools
-- **Ports**: 3000, 8080
-- **Pre-installed**: TypeScript, Jest, global dev tools
-- **Tools**: Azure CLI, GitHub CLI, Docker-in-Docker
+## 🎯 Workshop Selection
 
-### Java DevContainer (`.devcontainer/java`)
-- **Base**: Java 21 on Debian
-- **Extensions**: Extension Pack for Java, Spring Boot, GitHub Copilot, Azure Tools
-- **Ports**: 8080, 8081
-- **Pre-installed**: Maven, Spring Boot CLI
-- **Tools**: Azure CLI, GitHub CLI, Docker-in-Docker
+Once your Codespace is ready:
 
-## 🔧 Customization
+1. **Choose your preferred workshop**:
+   - [`workshop-dotnet.md`](../workshop-dotnet.md) - ASP.NET Core 8
+   - [`workshop-python.md`](../workshop-python.md) - FastAPI
+   - [`workshop-javascript.md`](../workshop-javascript.md) - Express + TypeScript
+   - [`workshop-java.md`](../workshop-java.md) - Spring Boot 3
 
-Each `devcontainer.json` can be customized. For local development and testing, check the [`local-setup`](../local-setup) folder which contains:
+2. **Follow the workshop guide** - everything is ready to go!
 
-- **Individual Dockerfiles** for each workshop
-- **Docker Compose** configuration for multi-container testing  
-- **Setup scripts** for automated environment setup
+## 💰 GitHub Codespaces Usage
 
-### DevContainer Configuration
-```json
-{
-  "name": "Custom Workshop Environment",
-  "image": "base-image",
-  "features": {
-    "ghcr.io/devcontainers/features/azure-cli:1": {}
-  },
-  "customizations": {
-    "vscode": {
-      "extensions": ["GitHub.copilot"],
-      "settings": {}
-    }
-  },
-  "forwardPorts": [8080],
-  "postCreateCommand": "echo 'Container ready!'"
-}
-```
+### Free Tier
+- **Personal accounts**: 60 hours/month free
+- **Perfect for workshops**: Each workshop takes 2-3 hours
 
-## 🛠️ Troubleshooting
+### Usage Tips
+- **Stop your Codespace** when not in use to save hours
+- **Use the browser version** to save on compute time
+- **Delete old Codespaces** you no longer need
 
-### Common Issues
+## 🔧 Configuration Details
 
-**1. Docker Desktop not running**
-- Start Docker Desktop before opening DevContainer
-- Check Docker status: `docker --version`
+The Codespace configuration is defined in [`.devcontainer/devcontainer.json`](devcontainer.json):
 
-**2. Container build fails**
-- Clear Docker cache: `docker system prune -a`
-- Rebuild container: `Remote-Containers: Rebuild Container`
+- **Base image**: Universal development container
+- **Port forwarding**: 3000, 5000, 8000, 8080 (for web apps)
+- **Auto-formatting**: Enabled on save
+- **GitHub Copilot**: Pre-configured and enabled
 
-**3. Extensions not loading**
-- Wait for container to fully initialize
-- Check "Extensions" tab for installation progress
+## 🚀 Alternative: Local Development
 
-**4. Port conflicts**
-- Modify `forwardPorts` in `devcontainer.json`
-- Use different ports for multiple workshops
+If you prefer local development:
 
-### Performance Tips
+1. **Clone this repository**
+2. **Install the prerequisites** for your chosen workshop:
+   - .NET 8 SDK, Python 3.11+, Node.js 20, or Java 17
+   - Visual Studio Code with GitHub Copilot extension
+3. **Open the workshop file** and follow the setup instructions
 
-**For Better Performance:**
-- Allocate more memory to Docker (8GB+ recommended)
-- Use local workspace mount for large repositories
-- Close unused VS Code windows
+## 🤝 Support
 
-**For Slower Machines:**
-- Use simpler base images (comment out non-essential features)
-- Reduce number of pre-installed extensions
-- Skip `postCreateCommand` for faster startup
+If you encounter any issues with Codespaces:
 
-## 🌐 Remote Development Options
-
-### GitHub Codespaces
-Use these devcontainers directly in GitHub Codespaces:
-1. Fork this repository
-2. Click "Code" → "Create codespace on main"
-3. Select appropriate devcontainer configuration
-
-### Azure Container Instances
-Deploy devcontainers to Azure for team workshops:
-```bash
-az container create \
-  --resource-group workshop-rg \
-  --name copilot-workshop \
-  --image mcr.microsoft.com/devcontainers/dotnet:8.0
-```
-
-## 🎯 Workshop-Specific Notes
-
-### .NET Workshop
-- EF Core tools pre-installed for database migrations
-- Multiple port mappings for HTTP/HTTPS development
-- Optimized for ASP.NET Core development
-
-### Python Workshop  
-- FastAPI and async libraries pre-installed
-- Configured for pytest and async testing
-- Python formatting and linting ready
-
-### JavaScript Workshop
-- TypeScript compiler and Node.js tools ready
-- ESLint and Prettier configured
-- Jest testing framework pre-installed
-
-### Java Workshop
-- Spring Boot development tools ready
-- Maven wrapper and build tools configured
-- JUnit 5 and Spring Boot testing ready
-
-## 📚 Learning Resources
-
-- [DevContainers Documentation](https://containers.dev/)
-- [VS Code Remote Development](https://code.visualstudio.com/docs/remote/remote-overview)
-- [Docker Best Practices](https://docs.docker.com/develop/best-practices/)
+1. **Check GitHub Status**: [status.github.com](https://status.github.com)
+2. **Restart your Codespace**: Sometimes a fresh start helps
+3. **Try incognito/private browsing**: Clears any browser cache issues
+4. **Use VS Code desktop**: Download the Codespace to VS Code desktop
 
 ---
 
-**🎉 Ready to start your workshop? Choose your devcontainer and begin coding with GitHub Copilot!**
+**Happy coding with GitHub Copilot in the cloud! ☁️🚀**

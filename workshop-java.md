@@ -1,17 +1,17 @@
 # GitHub Copilot Workshop - Java Edition (Express)
 *Master GitHub Copilot by building a complete Task Management API with Spring Boot*
 
-## 🚀 Quick Start with DevContainer
+## 🚀 Quick Start with GitHub Codespaces
 
-Ready to dive in? Use our pre-configured development environment with all tools and extensions ready to go!
+Ready to dive in? Use our cloud development environment with all tools and extensions ready to go!
 
-[![Open in DevContainer](https://img.shields.io/badge/Open%20in-DevContainer-blue?style=for-the-badge&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/your-repo-url.git&workspace=.devcontainer/java/devcontainer.json)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/your-username/github-copilot-express-workshop?quickstart=1)
 
-**Or manually:** 
-1. Open VS Code
-2. Install the "Remote - Containers" extension
-3. Use Command Palette: `Remote-Containers: Reopen in Container`
-4. Select the `.devcontainer/java` folder
+**Or manually setup:** 
+1. Click the Codespaces badge above
+2. Wait for the environment to load (2-3 minutes)
+3. All tools (Java 17/21, Maven, GitHub Copilot) are pre-installed
+4. Start coding immediately!
 
 ## ⏱️ Workshop Overview
 **Duration**: Flexible (typically 2-3 hours)

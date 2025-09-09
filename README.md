@@ -27,7 +27,7 @@ These workshops include:
 - **Rapid deployment** - Direct Azure deployment
 - **Focused scope** - Task management API
 - **Immediate results** - Working application quickly
-- **DevContainer support** - Complete development environment
+- **GitHub Codespaces support** - Complete cloud development environment
 
 ## 🎯 When to Use These Workshops
 
@@ -45,7 +45,7 @@ These workshops include:
 | Feature | Workshop |
 |---------|----------|
 | **Setup Time** | 10-15 min |
-| **Docker Required** | ❌ No (DevContainer optional) |
+| **Docker Required** | ❌ No (GitHub Codespaces available) |
 | **Database** | SQLite/H2 |
 | **Architecture** | Simple 3-layer |
 | **Testing** | Basic unit tests |
@@ -70,48 +70,38 @@ These workshops include:
 
 ## 🚀 Getting Started
 
-### 🐳 DevContainer Quick Start (Recommended)
+### ☁️ GitHub Codespaces Quick Start (Recommended)
 
-The fastest way to get started is using our pre-configured DevContainers that include all tools, extensions, and dependencies:
+The fastest way to get started is using GitHub Codespaces with pre-configured environments that include all tools, extensions, and dependencies:
 
-| Workshop | DevContainer | One-Click Start |
-|----------|--------------|-----------------|
-| .NET | [`.devcontainer/dotnet`](.devcontainer/dotnet) | [![Open in DevContainer](https://img.shields.io/badge/Open%20in-DevContainer-blue?style=flat-square&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/your-repo-url.git&workspace=.devcontainer/dotnet/devcontainer.json) |
-| Python | [`.devcontainer/python`](.devcontainer/python) | [![Open in DevContainer](https://img.shields.io/badge/Open%20in-DevContainer-blue?style=flat-square&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/your-repo-url.git&workspace=.devcontainer/python/devcontainer.json) |
-| JavaScript | [`.devcontainer/javascript`](.devcontainer/javascript) | [![Open in DevContainer](https://img.shields.io/badge/Open%20in-DevContainer-blue?style=flat-square&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/your-repo-url.git&workspace=.devcontainer/javascript/devcontainer.json) |
-| Java | [`.devcontainer/java`](.devcontainer/java) | [![Open in DevContainer](https://img.shields.io/badge/Open%20in-DevContainer-blue?style=flat-square&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/your-repo-url.git&workspace=.devcontainer/java/devcontainer.json) |
+| Workshop | GitHub Codespaces | One-Click Start |
+|----------|-------------------|-----------------|
+| .NET | Pre-configured Environment | [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/your-username/github-copilot-express-workshop?quickstart=1) |
+| Python | Pre-configured Environment | [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/your-username/github-copilot-express-workshop?quickstart=1) |
+| JavaScript | Pre-configured Environment | [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/your-username/github-copilot-express-workshop?quickstart=1) |
+| Java | Pre-configured Environment | [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/your-username/github-copilot-express-workshop?quickstart=1) |
 
-**DevContainer Benefits:**
-- ✅ **Zero setup time** - Everything pre-configured
-- ✅ **Consistent environment** - Same for everyone
-- ✅ **All tools included** - SDKs, extensions, CLI tools
-- ✅ **Works anywhere** - Local, cloud, or browser
+**GitHub Codespaces Benefits:**
+- ✅ **Zero setup time** - Everything pre-configured in the cloud
+- ✅ **Consistent environment** - Same for everyone, anywhere
+- ✅ **All tools included** - SDKs, extensions, CLI tools pre-installed
+- ✅ **Works in browser** - No local installation required
+- ✅ **Free tier available** - 60 hours/month for personal accounts
 
-[📚 DevContainer Setup Guide](.devcontainer/README.md)
+[📚 GitHub Codespaces Setup Guide](.devcontainer/README.md)
 
-### 🛠️ Alternative: Quick Setup Scripts
+### 🛠️ Alternative: Local Development Setup
 
-For local development with DevContainers, use our setup scripts:
+For local development, you can set up your environment manually:
 
-**Windows:**
-```bash
-cd local-setup
-setup.bat
-```
+**Prerequisites for Each Workshop:**
+- **GitHub Copilot** subscription and VS Code extension
+- **Git** for version control
+- **Language-specific runtime** (see requirements below)
 
-**macOS/Linux:**
-```bash
-cd local-setup
-chmod +x setup.sh
-./setup.sh
-```
-
-These scripts will:
-1. ✅ Check Docker Desktop is running
-2. ✅ Verify VS Code installation
-3. ✅ Install required extensions
-4. ✅ Let you choose your workshop
-5. ✅ Open the appropriate DevContainer
+Choose your preferred setup method:
+1. **Direct local setup** - Install prerequisites manually
+2. **GitHub Codespaces** - Use cloud development environment (recommended)
 
 ### For These Workshops (Recommended for beginners):
 1. **Choose your preferred language/framework**
