@@ -1,0 +1,81 @@
+# Docker Compose for GitHub Copilot Workshops
+# This file allows you to test and run multiple workshop environments simultaneously
+
+version: '3.8'
+
+services:
+  # .NET Workshop Environment
+  dotnet-workshop:
+    build:
+      context: ..
+      dockerfile: local-setup/Dockerfile.dotnet
+    container_name: copilot-workshop-dotnet
+    ports:
+      - "5000:5000"
+      - "5001:5001"
+      - "7000:7000"
+      - "7001:7001"
+    volumes:
+      - .:/workspace:cached
+      - vscode-extensions-dotnet:/root/.vscode-server/extensions
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    command: sleep infinity
+
+  # Python Workshop Environment  
+  python-workshop:
+    build:
+      context: ..
+      dockerfile: local-setup/Dockerfile.python
+    container_name: copilot-workshop-python
+    ports:
+      - "8000:8000"
+      - "8001:8001"
+    volumes:
+      - .:/workspace:cached
+      - vscode-extensions-python:/root/.vscode-server/extensions
+    environment:
+      - PYTHONPATH=/workspace
+    command: sleep infinity
+
+  # JavaScript/TypeScript Workshop Environment
+  javascript-workshop:
+    build:
+      context: ..
+      dockerfile: local-setup/Dockerfile.javascript
+    container_name: copilot-workshop-javascript
+    ports:
+      - "3000:3000"
+      - "3001:3001"
+    volumes:
+      - .:/workspace:cached
+      - vscode-extensions-js:/root/.vscode-server/extensions
+      - node_modules:/workspace/node_modules
+    environment:
+      - NODE_ENV=development
+    command: sleep infinity
+
+  # Java Workshop Environment
+  java-workshop:
+    build:
+      context: ..
+      dockerfile: local-setup/Dockerfile.java
+    container_name: copilot-workshop-java
+    ports:
+      - "8080:8080"
+      - "8081:8081"
+    volumes:
+      - .:/workspace:cached
+      - vscode-extensions-java:/root/.vscode-server/extensions
+      - maven-cache:/root/.m2
+    environment:
+      - MAVEN_OPTS=-Xmx1024m
+    command: sleep infinity
+
+volumes:
+  vscode-extensions-dotnet:
+  vscode-extensions-python:
+  vscode-extensions-js:
+  vscode-extensions-java:
+  node_modules:
+  maven-cache:

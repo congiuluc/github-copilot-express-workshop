@@ -1,0 +1,44 @@
+{
+  "name": "GitHub Copilot Workshop - .NET",
+  "image": "mcr.microsoft.com/devcontainers/dotnet:1-8.0-bookworm",
+  
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/azure-cli:1": {},
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-dotnettools.csharp",
+        "ms-dotnettools.csdevkit",
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "ms-vscode.vscode-json",
+        "ms-azuretools.vscode-azureappservice",
+        "ms-azuretools.vscode-azureresourcegroups",
+        "humao.rest-client",
+        "formulahendry.dotnet-test-explorer"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "dotnet.completion.showCompletionItemsFromUnimportedNamespaces": true,
+        "omnisharp.enableRoslynAnalyzers": true,
+        "csharp.semanticHighlighting.enabled": true
+      }
+    }
+  },
+
+  "forwardPorts": [5000, 5001, 7000, 7001],
+
+  "postCreateCommand": "dotnet --version && echo '✅ .NET DevContainer ready for GitHub Copilot Workshop!'",
+
+  "remoteUser": "vscode",
+
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
+  ],
+
+  "workspaceFolder": "/workspace"
+}
