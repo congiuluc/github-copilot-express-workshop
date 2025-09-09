@@ -1,0 +1,11 @@
+{
+  "enabledRegions": ["*"],
+  "defaultMachineType": "basicLinux32gb",
+  "prebuildTriggers": {
+    "main": true,
+    "pullRequest": true
+  },
+  "maxCodespacesPerUser": 5,
+  "retentionPeriodMinutes": 4320,
+  "idleTimeoutMinutes": 30
+}

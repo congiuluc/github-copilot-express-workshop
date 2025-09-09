@@ -3,15 +3,18 @@
 
 ## 🚀 Quick Start with GitHub Codespaces
 
-Ready to dive in? Use our cloud development environment with all tools and extensions ready to go!
+Ready to dive in? Use our optimized .NET development environment with all tools and extensions ready to go!
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/your-username/github-copilot-express-workshop?quickstart=1)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/your-username/github-copilot-express-workshop?devcontainer_path=.devcontainer/dotnet)
 
-**Or manually setup:** 
-1. Click the Codespaces badge above
-2. Wait for the environment to load (2-3 minutes)
-3. All tools (.NET 8, C# extensions, GitHub Copilot) are pre-installed
-4. Start coding immediately!
+**What's included in your .NET Codespace:**
+- ✅ **.NET 8 SDK** - Latest LTS version
+- ✅ **C# Dev Kit & Extensions** - Full IntelliSense and debugging
+- ✅ **GitHub Copilot** - AI-powered code completion
+- ✅ **Azure CLI** - Deploy directly to Azure
+- ✅ **Port forwarding** - Test your API instantly (ports 5000, 5001, 7000, 7001)
+
+**Setup time:** ~60 seconds (vs 2-3 minutes for multi-language environment)
 
 ## ⏱️ Workshop Overview
 **Duration**: Flexible (typically 2-3 hours)

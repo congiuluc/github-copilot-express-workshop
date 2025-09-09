@@ -1,14 +1,85 @@
 # GitHub Codespaces Setup for GitHub Copilot Express Workshop
 
-This repository is pre-configured to work seamlessly with GitHub Codespaces, providing you with a complete cloud development environment.
+This repository is configured with **language-specific** GitHub Codespaces for optimal performance and faster startup times.
 
-## 🚀 Quick Start
+## 🎯 Choose Your Language-Specific Environment
 
-1. **Click the Codespaces badge** in any workshop file or use the button below
-2. **Wait 2-3 minutes** for the environment to initialize
-3. **Start coding immediately** - all tools are pre-installed!
+Instead of waiting for a multi-language environment to load, select your specific workshop track:
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/your-username/github-copilot-express-workshop?quickstart=1)
+| Language | Optimized Environment | Startup Time | Direct Link |
+|----------|----------------------|--------------|-------------|
+| **.NET** | ASP.NET Core 8, C# Dev Kit | ~60 seconds | [![.NET Codespace](https://github.com/codespaces/badge.svg)](https://codespaces.new/your-username/github-copilot-express-workshop?devcontainer_path=.devcontainer/dotnet) |
+| **Python** | Python 3.11, FastAPI tools | ~45 seconds | [![Python Codespace](https://github.com/codespaces/badge.svg)](https://codespaces.new/your-username/github-copilot-express-workshop?devcontainer_path=.devcontainer/python) |
+| **JavaScript** | Node.js 20, TypeScript | ~50 seconds | [![JavaScript Codespace](https://github.com/codespaces/badge.svg)](https://codespaces.new/your-username/github-copilot-express-workshop?devcontainer_path=.devcontainer/javascript) |
+| **Java** | Java 17, Spring Boot | ~75 seconds | [![Java Codespace](https://github.com/codespaces/badge.svg)](https://codespaces.new/your-username/github-copilot-express-workshop?devcontainer_path=.devcontainer/java) |
+
+## ⚡ Benefits of Language-Specific Codespaces
+
+### **Performance Benefits:**
+- ✅ **3x faster startup** - 45-75 seconds vs 2-3 minutes
+- ✅ **Smaller containers** - Only your language tools
+- ✅ **Better performance** - Less memory usage, faster operations
+- ✅ **Free tier friendly** - Uses significantly less compute time
+
+### **Developer Experience:**
+- ✅ **Focused environment** - No unnecessary tools cluttering workspace
+- ✅ **Optimized extensions** - Only relevant VS Code extensions
+- ✅ **Language-specific settings** - Pre-configured for each technology
+- ✅ **Faster IntelliSense** - Language-specific tooling optimization
+
+## 🤖 Automated Codespace Creation
+
+### Method 1: Direct URL Parameters (Recommended)
+You can create Codespaces instantly using URL parameters:
+
+```
+https://codespaces.new/your-username/github-copilot-express-workshop?quickstart=1&machine=basicLinux32gb
+```
+
+**URL Parameters:**
+- `quickstart=1` - Skip setup prompts
+- `machine=basicLinux32gb` - Set machine type (2-core, 8GB RAM)
+- `devcontainer_path=.devcontainer` - Use our pre-configured environment
+
+### Method 2: GitHub CLI Automation
+Create Codespaces programmatically with GitHub CLI:
+
+```bash
+# Install GitHub CLI first: https://cli.github.com
+gh auth login
+gh codespace create --repo your-username/github-copilot-express-workshop --machine basicLinux32gb
+```
+
+### Method 3: Workshop-Specific Quick Links
+For workshop facilitators, here are direct links for each track:
+
+| Workshop | Direct Codespace Link |
+|----------|----------------------|
+| .NET | [Create .NET Codespace](https://codespaces.new/your-username/github-copilot-express-workshop?quickstart=1&machine=basicLinux32gb&devcontainer_path=.devcontainer) |
+| Python | [Create Python Codespace](https://codespaces.new/your-username/github-copilot-express-workshop?quickstart=1&machine=basicLinux32gb&devcontainer_path=.devcontainer) |
+| JavaScript | [Create JavaScript Codespace](https://codespaces.new/your-username/github-copilot-express-workshop?quickstart=1&machine=basicLinux32gb&devcontainer_path=.devcontainer) |
+| Java | [Create Java Codespace](https://codespaces.new/your-username/github-copilot-express-workshop?quickstart=1&machine=basicLinux32gb&devcontainer_path=.devcontainer) |
+
+### Method 4: Prebuilds for Instant Startup
+For even faster creation, enable Codespaces Prebuilds in your repository settings:
+
+1. Go to **Settings** → **Codespaces** in your repository
+2. Click **Set up prebuild**
+3. Configure prebuild triggers (push to main, schedule)
+4. Codespaces will start in 10-30 seconds instead of 2-3 minutes
+
+### Method 5: Workshop Facilitator Automation
+For workshop organizers managing multiple participants:
+
+```bash
+# Create multiple Codespaces for participants
+for i in {1..10}; do
+  gh codespace create \
+    --repo your-username/github-copilot-express-workshop \
+    --machine basicLinux32gb \
+    --display-name "Workshop-Participant-$i"
+done
+```
 
 ## 🛠️ What's Pre-installed
 

@@ -1,0 +1,43 @@
+{
+  "name": "GitHub Copilot Workshop - JavaScript/TypeScript",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+  "features": {
+    "ghcr.io/devcontainers/features/azure-cli:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "ms-vscode.vscode-typescript-next",
+        "ms-vscode.vscode-eslint",
+        "bradlc.vscode-tailwindcss",
+        "ms-azuretools.vscode-azureappservice",
+        "ms-azuretools.vscode-azurefunctions",
+        "esbenp.prettier-vscode",
+        "ms-vscode.vscode-json",
+        "humao.rest-client"
+      ],
+      "settings": {
+        "github.copilot.enable": {
+          "*": true,
+          "yaml": false,
+          "plaintext": false,
+          "markdown": true
+        },
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+          "source.fixAll": "explicit"
+        },
+        "typescript.preferences.includePackageJsonAutoImports": "auto",
+        "typescript.suggest.autoImports": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "eslint.format.enable": true
+      }
+    }
+  },
+  "forwardPorts": [3000, 3001, 8000, 5000],
+  "postCreateCommand": "node --version && npm --version && echo '⚡ JavaScript/TypeScript Codespace ready! Open workshop-javascript.md to get started.'",
+  "remoteUser": "vscode"
+}

@@ -3,15 +3,19 @@
 
 ## 🚀 Quick Start with GitHub Codespaces
 
-Ready to dive in? Use our cloud development environment with all tools and extensions ready to go!
+Ready to dive in? Use our optimized JavaScript/TypeScript development environment with all tools and extensions ready to go!
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/your-username/github-copilot-express-workshop?quickstart=1)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/your-username/github-copilot-express-workshop?devcontainer_path=.devcontainer/javascript)
 
-**Or manually setup:** 
-1. Click the Codespaces badge above
-2. Wait for the environment to load (2-3 minutes)
-3. All tools (Node.js 20 LTS, TypeScript, GitHub Copilot) are pre-installed
-4. Start coding immediately!
+**What's included in your JavaScript Codespace:**
+- ✅ **Node.js 20 LTS** - Latest stable version with npm
+- ✅ **TypeScript Support** - Full IntelliSense and type checking
+- ✅ **ESLint & Prettier** - Code quality and formatting
+- ✅ **GitHub Copilot** - AI-powered code completion
+- ✅ **Azure CLI** - Deploy to Azure App Service
+- ✅ **Port forwarding** - Test your Express API instantly (ports 3000, 3001, 8000, 5000)
+
+**Setup time:** ~50 seconds (vs 2-3 minutes for multi-language environment)
 
 ## ⏱️ Workshop Overview
 **Duration**: Flexible (typically 2-3 hours)

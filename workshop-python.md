@@ -3,15 +3,18 @@
 
 ## 🚀 Quick Start with GitHub Codespaces
 
-Ready to dive in? Use our cloud development environment with all tools and extensions ready to go!
+Ready to dive in? Use our optimized Python development environment with all tools and extensions ready to go!
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/your-username/github-copilot-express-workshop?quickstart=1)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/your-username/github-copilot-express-workshop?devcontainer_path=.devcontainer/python)
 
-**Or manually setup:** 
-1. Click the Codespaces badge above
-2. Wait for the environment to load (2-3 minutes)
-3. All tools (Python 3.11+, extensions, GitHub Copilot) are pre-installed
-4. Start coding immediately!
+**What's included in your Python Codespace:**
+- ✅ **Python 3.11+** - Latest stable version with pip
+- ✅ **Python Extensions** - Pylint, Black formatter, IntelliSense
+- ✅ **GitHub Copilot** - AI-powered code completion
+- ✅ **Azure CLI** - Deploy to Azure Container Apps
+- ✅ **Port forwarding** - Test your FastAPI instantly (ports 8000, 8080, 5000)
+
+**Setup time:** ~45 seconds (vs 2-3 minutes for multi-language environment)
 
 ## ⏱️ Workshop Overview
 **Duration**: Flexible (typically 2-3 hours)

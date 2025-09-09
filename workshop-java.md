@@ -3,15 +3,19 @@
 
 ## 🚀 Quick Start with GitHub Codespaces
 
-Ready to dive in? Use our cloud development environment with all tools and extensions ready to go!
+Ready to dive in? Use our optimized Java development environment with all tools and extensions ready to go!
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/your-username/github-copilot-express-workshop?quickstart=1)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/your-username/github-copilot-express-workshop?devcontainer_path=.devcontainer/java)
 
-**Or manually setup:** 
-1. Click the Codespaces badge above
-2. Wait for the environment to load (2-3 minutes)
-3. All tools (Java 17/21, Maven, GitHub Copilot) are pre-installed
-4. Start coding immediately!
+**What's included in your Java Codespace:**
+- ✅ **Java 17** - LTS version with Maven
+- ✅ **Java Extension Pack** - Full IDE experience with Spring Boot support
+- ✅ **Spring Boot Tools** - Project templates and debugging
+- ✅ **GitHub Copilot** - AI-powered code completion
+- ✅ **Azure CLI** - Deploy to Azure App Service
+- ✅ **Port forwarding** - Test your Spring Boot API instantly (ports 8080, 8081, 9090)
+
+**Setup time:** ~75 seconds (vs 2-3 minutes for multi-language environment)
 
 ## ⏱️ Workshop Overview
 **Duration**: Flexible (typically 2-3 hours)

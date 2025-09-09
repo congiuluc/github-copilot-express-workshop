@@ -1,0 +1,41 @@
+{
+  "name": "GitHub Copilot Workshop - .NET",
+  "image": "mcr.microsoft.com/devcontainers/dotnet:8.0",
+  "features": {
+    "ghcr.io/devcontainers/features/azure-cli:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "ms-dotnettools.csharp",
+        "ms-dotnettools.csdevkit",
+        "ms-azuretools.vscode-azureappservice",
+        "ms-azuretools.vscode-azurefunctions",
+        "esbenp.prettier-vscode",
+        "ms-vscode.vscode-json",
+        "humao.rest-client"
+      ],
+      "settings": {
+        "github.copilot.enable": {
+          "*": true,
+          "yaml": false,
+          "plaintext": false,
+          "markdown": true
+        },
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+          "source.fixAll": "explicit"
+        },
+        "dotnet.completion.showCompletionItemsFromUnimportedNamespaces": true,
+        "dotnet.inlayHints.enableInlayHintsForParameters": true,
+        "dotnet.inlayHints.enableInlayHintsForTypes": true
+      }
+    }
+  },
+  "forwardPorts": [5000, 5001, 7000, 7001],
+  "postCreateCommand": "dotnet --version && echo '🚀 .NET Codespace ready! Open workshop-dotnet.md to get started.'",
+  "remoteUser": "vscode"
+}

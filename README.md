@@ -72,21 +72,48 @@ These workshops include:
 
 ### ☁️ GitHub Codespaces Quick Start (Recommended)
 
-The fastest way to get started is using GitHub Codespaces with pre-configured environments that include all tools, extensions, and dependencies:
+Choose your language-specific development environment for faster startup and optimized tooling:
 
-| Workshop | GitHub Codespaces | One-Click Start |
-|----------|-------------------|-----------------|
-| .NET | Pre-configured Environment | [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/your-username/github-copilot-express-workshop?quickstart=1) |
-| Python | Pre-configured Environment | [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/your-username/github-copilot-express-workshop?quickstart=1) |
-| JavaScript | Pre-configured Environment | [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/your-username/github-copilot-express-workshop?quickstart=1) |
-| Java | Pre-configured Environment | [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/your-username/github-copilot-express-workshop?quickstart=1) |
+| Workshop | Language-Specific Codespace | Startup Time | One-Click Start |
+|----------|------------------------------|--------------|-----------------|
+| .NET | ASP.NET Core 8 + C# Tools | ~60 seconds | [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/your-username/github-copilot-express-workshop?devcontainer_path=.devcontainer/dotnet) |
+| Python | Python 3.11 + FastAPI Tools | ~45 seconds | [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/your-username/github-copilot-express-workshop?devcontainer_path=.devcontainer/python) |
+| JavaScript | Node.js 20 + TypeScript Tools | ~50 seconds | [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/your-username/github-copilot-express-workshop?devcontainer_path=.devcontainer/javascript) |
+| Java | Java 17 + Spring Boot Tools | ~75 seconds | [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/your-username/github-copilot-express-workshop?devcontainer_path=.devcontainer/java) |
 
-**GitHub Codespaces Benefits:**
-- ✅ **Zero setup time** - Everything pre-configured in the cloud
-- ✅ **Consistent environment** - Same for everyone, anywhere
-- ✅ **All tools included** - SDKs, extensions, CLI tools pre-installed
-- ✅ **Works in browser** - No local installation required
-- ✅ **Free tier available** - 60 hours/month for personal accounts
+**Language-Specific Benefits:**
+- ✅ **Faster startup** - Only installs tools you need (45-75 seconds vs 2-3 minutes)
+- ✅ **Optimized environment** - Language-specific extensions and settings
+- ✅ **Better performance** - Smaller container size, faster operations
+- ✅ **Focused workspace** - No unnecessary tools cluttering your environment
+- ✅ **Free tier friendly** - Uses less compute time
+
+**🤖 Automation Options:**
+- **Language-specific URLs**: 
+  - .NET: `https://codespaces.new/your-repo?devcontainer_path=.devcontainer/dotnet`
+  - Python: `https://codespaces.new/your-repo?devcontainer_path=.devcontainer/python`
+  - JavaScript: `https://codespaces.new/your-repo?devcontainer_path=.devcontainer/javascript`
+  - Java: `https://codespaces.new/your-repo?devcontainer_path=.devcontainer/java`
+- **GitHub CLI**: `gh codespace create --repo your-repo --devcontainer-path .devcontainer/python`
+- **Prebuilds**: Enable in repository settings for 15-30 second startup
+- **Bulk creation**: Create multiple language-specific Codespaces for workshops
+- **Automation scripts**: Updated for language-specific creation
+
+### 🏫 For Workshop Facilitators
+Updated automation scripts support language-specific Codespace creation:
+
+- **Bash**: `./scripts/create-workshop-codespaces.sh -l python` (Linux/macOS)
+- **PowerShell**: `.\scripts\create-workshop-codespaces.ps1 -Language dotnet` (Windows)
+- **Cleanup**: `./scripts/cleanup-codespaces.sh` (post-workshop cleanup)
+
+Example: Create 10 Python-specific Codespaces:
+```bash
+# Linux/macOS
+./scripts/create-workshop-codespaces.sh -l python -c 10
+
+# Windows PowerShell
+.\scripts\create-workshop-codespaces.ps1 -Language python -ParticipantCount 10
+```
 
 [📚 GitHub Codespaces Setup Guide](.devcontainer/README.md)
 
